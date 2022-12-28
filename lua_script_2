@@ -1,0 +1,12 @@
+local objectEntity = script:SelfEntity()
+local moveComponent = YaScene:GetComponent(script:GetComponentType("YaMovableComponent"), objectEntity)
+   
+local timer = YaTime:ScheduleAtInterval(0,0.1)
+    
+EventHelper.AddListener(timer, "TimeEvent",function ()
+    local objectPos = moveComponent:GetPosition()
+    local shiftPos = float3.New(0.01, 0, 0)
+    local objectPosUpdate = objectPos:Add(shiftPos)
+    moveComponent:SetPosition(objectPosUpdate)
+        
+end)
