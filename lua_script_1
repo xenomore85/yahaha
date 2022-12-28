@@ -1,0 +1,11 @@
+print(“Welcome to Yahaha”)
+
+local function calc(x,y)
+	local m =  x + x
+	local n = y + y
+	return m*n
+end
+
+local result = calc(1,2)
+
+print(result)
