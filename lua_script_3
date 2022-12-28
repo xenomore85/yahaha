@@ -1,0 +1,134 @@
+local __localVariables = {}
+__localVariables.initialHeight = 0
+
+
+PhysicsAPI.OnTriggerEnter(function (__Node1_DataOutput_i0,__Node1_DataOutput_i1)
+local __co_asdas_outer
+__co_asdas_outer = coroutine.wrap(
+    function()
+        local __co_asdas_inner = __co_asdas_outer
+        local __Node29_DataInput_i0 = __Node1_DataOutput_i1
+local __Node29_DataOutput_result
+-- node29 start
+__Node29_DataOutput_result = YaCharacterAPI.IsPlayerCharacter(__Node29_DataInput_i0)
+-- node29 end
+local __Node38_DataInput_condition = ((__Node1_DataOutput_i0.EntityId) == (script:SelfEntity().EntityId)) and (__Node29_DataOutput_result)
+-- node38 start
+if (__Node38_DataInput_condition)
+then
+    local __Node132_DataInput_Start = 0
+local __Node132_DataInput_End = 30
+local __Node132_DataInput_Step = 1
+local __Node132_DataOutput_Index
+-- node132 start
+for __Node132_index=__Node132_DataInput_Start,__Node132_DataInput_End,__Node132_DataInput_Step do
+    __Node132_DataOutput_Index = __Node132_index
+local __Node118_DataInput_this = __Node1_DataOutput_i0
+local __Node118_DataOutput_result
+local __Node118_nodegraph_component = YaScene:GetComponent(script:GetComponentType("YaMovableComponent"), __Node1_DataOutput_i0)
+if (__Node118_nodegraph_component == nil) then
+    error(string.format("asdas: Dependency for GameObject %s: YaMovableComponent is missing. ", script:GetName(__Node1_DataOutput_i0.EntityId)))
+end
+-- node118 start
+__Node118_DataOutput_result = __Node118_nodegraph_component:GetGlobalPosition()
+-- node118 end
+local __Node8_DataInput_this = __Node118_DataOutput_result
+local __Node8_DataInput_i0 = float3.New(0, -0.01, 0)
+local __Node8_DataOutput_result
+-- node8 start
+__Node8_DataOutput_result = __Node8_DataInput_this:Add(__Node8_DataInput_i0)
+-- node8 end
+local __Node116_DataInput_this = __Node1_DataOutput_i0
+local __Node116_DataInput_i0 = __Node8_DataOutput_result
+local __Node116_nodegraph_component = YaScene:GetComponent(script:GetComponentType("YaMovableComponent"), __Node1_DataOutput_i0)
+if (__Node116_nodegraph_component == nil) then
+    error(string.format("asdas: Dependency for GameObject %s: YaMovableComponent is missing. ", script:GetName(__Node1_DataOutput_i0.EntityId)))
+end
+-- node116 start
+__Node116_nodegraph_component:SetGlobalPosition(__Node116_DataInput_i0)
+-- node116 end
+local __Node137_DataInput_Duration = 0.1
+-- node137 start
+EventHelper.AddListener(YaTime:WaitFor(__Node137_DataInput_Duration), "TimeEvent", function(...)
+    __co_asdas_inner()
+end)
+coroutine.yield()
+-- node137 end
+end
+
+-- node132 end
+else
+    
+end
+-- node38 end
+    end
+)
+__co_asdas_outer()
+end)
+
+
+PhysicsAPI.OnTriggerExit(function (__Node15_DataOutput_i0,__Node15_DataOutput_i1)
+local __co_asdas_outer
+__co_asdas_outer = coroutine.wrap(
+    function()
+        local __co_asdas_inner = __co_asdas_outer
+        local __Node141_DataInput_i0 = __Node15_DataOutput_i1
+local __Node141_DataOutput_result
+-- node141 start
+__Node141_DataOutput_result = YaCharacterAPI.IsPlayerCharacter(__Node141_DataInput_i0)
+-- node141 end
+local __Node146_DataInput_condition = ((__Node15_DataOutput_i0.EntityId) == (script:SelfEntity().EntityId)) and (__Node141_DataOutput_result)
+-- node146 start
+if (__Node146_DataInput_condition)
+then
+    local __Node149_DataInput_Start = 0
+local __Node149_DataInput_End = 30
+local __Node149_DataInput_Step = 1
+local __Node149_DataOutput_Index
+-- node149 start
+for __Node149_index=__Node149_DataInput_Start,__Node149_DataInput_End,__Node149_DataInput_Step do
+    __Node149_DataOutput_Index = __Node149_index
+local __Node148_DataInput_this = __Node15_DataOutput_i0
+local __Node148_DataOutput_result
+local __Node148_nodegraph_component = YaScene:GetComponent(script:GetComponentType("YaMovableComponent"), __Node15_DataOutput_i0)
+if (__Node148_nodegraph_component == nil) then
+    error(string.format("asdas: Dependency for GameObject %s: YaMovableComponent is missing. ", script:GetName(__Node15_DataOutput_i0.EntityId)))
+end
+-- node148 start
+__Node148_DataOutput_result = __Node148_nodegraph_component:GetGlobalPosition()
+-- node148 end
+local __Node140_DataInput_this = __Node148_DataOutput_result
+local __Node140_DataInput_i0 = float3.New(0, 0.01, 0)
+local __Node140_DataOutput_result
+-- node140 start
+__Node140_DataOutput_result = __Node140_DataInput_this:Add(__Node140_DataInput_i0)
+-- node140 end
+local __Node147_DataInput_this = __Node15_DataOutput_i0
+local __Node147_DataInput_i0 = __Node140_DataOutput_result
+local __Node147_nodegraph_component = YaScene:GetComponent(script:GetComponentType("YaMovableComponent"), __Node15_DataOutput_i0)
+if (__Node147_nodegraph_component == nil) then
+    error(string.format("asdas: Dependency for GameObject %s: YaMovableComponent is missing. ", script:GetName(__Node15_DataOutput_i0.EntityId)))
+end
+-- node147 start
+__Node147_nodegraph_component:SetGlobalPosition(__Node147_DataInput_i0)
+-- node147 end
+local __Node150_DataInput_Duration = 0.1
+-- node150 start
+EventHelper.AddListener(YaTime:WaitFor(__Node150_DataInput_Duration), "TimeEvent", function(...)
+    __co_asdas_inner()
+end)
+coroutine.yield()
+-- node150 end
+end
+
+-- node149 end
+else
+    
+end
+-- node146 end
+    end
+)
+__co_asdas_outer()
+end)
+
+
