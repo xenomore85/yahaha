@@ -1,2 +1,2 @@
 # Yahaha Studio Education
-Educational Materials for Yahaha
+Lua script educational materials for Yahaha Studio
